@@ -8,13 +8,19 @@ use App\Models\User;
 use App\Models\Contact;
 use Tests\TestCase;
 
+
+/**
+ * Feature tests for contact CRUD operations.
+ *
+ * Covers: index, create, update, and delete actions for authenticated users.
+ */
 class ContactCrudTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
     use RefreshDatabase;
 
+    /**
+     * Test if authenticated user can view contacts index.
+     */
     public function test_authenticated_user_can_view_contacts_index(): void
     {
         $user = User::factory()->create();
@@ -28,6 +34,9 @@ class ContactCrudTest extends TestCase
         }
     }
 
+    /**
+     * Test if authenticated user can create a contact.
+     */
     public function test_authenticated_user_can_create_contact(): void
     {
         $user = User::factory()->create();
@@ -41,6 +50,9 @@ class ContactCrudTest extends TestCase
         $this->assertDatabaseHas('contacts', ['email' => 'testuser@example.com']);
     }
 
+    /**
+     * Test if authenticated user can update a contact.
+     */
     public function test_authenticated_user_can_update_contact(): void
     {
         $user = User::factory()->create();
@@ -55,6 +67,9 @@ class ContactCrudTest extends TestCase
         $this->assertDatabaseHas('contacts', ['email' => 'updated@example.com']);
     }
 
+    /**
+     * Test if authenticated user can delete a contact (soft delete).
+     */
     public function test_authenticated_user_can_delete_contact(): void
     {
         $user = User::factory()->create();

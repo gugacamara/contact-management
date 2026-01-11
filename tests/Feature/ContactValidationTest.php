@@ -8,13 +8,18 @@ use App\Models\User;
 use App\Models\Contact;
 use Tests\TestCase;
 
+
+/**
+ * Feature tests for contact validation rules.
+ *
+ */
 class ContactValidationTest extends TestCase
 {
-    /**
-     * A basic feature test example.
-     */
     use RefreshDatabase;
 
+    /**
+     * Test that contact creation enforces validation rules.
+     */
     public function test_contact_validation_rules(): void
     {
         $user = User::factory()->create();
@@ -26,6 +31,9 @@ class ContactValidationTest extends TestCase
         $response->assertSessionHasErrors(['name', 'contact', 'email']);
     }
 
+    /**
+     * Test that contact email and contact number must be unique.
+     */
     public function test_contact_email_and_contact_must_be_unique(): void
     {
         $user = User::factory()->create();

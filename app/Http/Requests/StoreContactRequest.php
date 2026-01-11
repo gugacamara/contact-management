@@ -5,10 +5,18 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
+
+/**
+ * Request for validating and authorizing contact creation.
+ *
+ * Validates name, contact (unique, 9 digits), and email (unique, email format).
+ */
 class StoreContactRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
+     *
+     * @return bool
      */
     public function authorize(): bool
     {
