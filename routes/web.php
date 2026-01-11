@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+// Authentication routes
+Route::get('login', function () {
+    return view('login');
+})->name('login');
+
+Route::post('login', function (Request $request) {
+    if (Auth::attempt(['name' => $request->name, 'password' => $request->password])) {
+        return redirect()->intended('/');
+    }
+    return back()->withInput()->withErrors(['name' => 'Invalid credentials.']);
 });
+
+Route::post('logout', function () {
+    Auth::logout();
+    return redirect('/');
+})->name('logout');
+
+// CRUD - contacts
+Route::get('/', [ContactController::class, 'index'])->name('contacts.index');
+Route::resource('contacts', ContactController::class)->except(['index']);
