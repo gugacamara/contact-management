@@ -122,7 +122,7 @@ contact-management/
 Desenvolvido por **[Gustavo Câmara]** 🚀
 [LinkedIn](https://linkedin.com/in/seu-linkedin) | [GitHub](https://github.com/gugacamara)
 
-Contato: [Gustavo Câmara](mailto:gustavocamara.lv@gmail.com).
+Contato: [E-mail](mailto:gustavocamara.lv@gmail.com).
 
 ---
 
