@@ -119,10 +119,10 @@ contact-management/
 ```
 
 ---
-Desenvolvido por **[Gustavo Câmara]** 🚀
-[LinkedIn](https://linkedin.com/in/seu-linkedin) | [GitHub](https://github.com/gugacamara)
+[<img src="https://github.com/gugacamara.png" width="32" align="left" alt="Gustavo Câmara"/>](https://github.com/gugacamara)
+Desenvolvido por [Gustavo Câmara](https://github.com/gugacamara) 🚀
 
-Contato: [E-mail](mailto:gustavocamara.lv@gmail.com).
+Contato [E-mail](mailto:gustavocamara.lv@gmail.com).
 
 ---
 
