@@ -120,7 +120,9 @@ contact-management/
 
 ---
 [<img src="https://github.com/gugacamara.png" width="100" align="top" alt="Gustavo Câmara"/>](https://github.com/gugacamara)
+
 Desenvolvido por [Gustavo Câmara](https://github.com/gugacamara) 🚀
+
 Contato [E-mail](mailto:gustavocamara.lv@gmail.com).
 
 ---
